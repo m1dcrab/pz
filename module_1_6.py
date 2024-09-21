@@ -3,7 +3,7 @@ print ('словарь:',my_dict)
 print ('ключ:',my_dict.get('u1name','ошибка'))
 print ('ключа нет:',my_dict.get('wrong','ошибка'))
 pop_ = my_dict.pop('u2name')
-print ('значение удаленного ключа u2name:',pop_)
+print ('значение удаленного ключа "u2name":',pop_)
 print ('измененный словарь:',my_dict)
 
 my_set = {3,0.00,0,True,'one',3,7,True,False,(1,2,4)}
