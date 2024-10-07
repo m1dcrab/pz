@@ -1,5 +1,3 @@
-from email.policy import strict
-
 i = int(input('введите значение '))
 result = []
 for firstKeyNumber in range(1,i+1):
