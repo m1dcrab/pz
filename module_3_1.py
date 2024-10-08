@@ -6,7 +6,7 @@ def count_calls():
 def string_info(string):
     count_calls()
     string = (len(string),string.upper(),string.lower())
-    return string#, calls
+    return string
 
 def is_contains(string,list_to_search):
     count_calls()
