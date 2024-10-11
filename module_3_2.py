@@ -1,20 +1,14 @@
-
 def send_email(messege, recipient, sender = "university.help@gmail.com"):
-    for i in range(1):
-        if not(((sender.endswith(".ru") or sender.endswith(".com") or sender.endswith(".net")) and '@' in sender) and
+    error_id = 0
+    if not(((sender.endswith(".ru") or sender.endswith(".com") or sender.endswith(".net")) and '@' in sender) and
 ((recipient.endswith(".ru") or recipient.endswith(".com") or recipient.endswith(".net")) and '@' in recipient)):
-            error_id = 1
-            break
+        error_id = 1
 
-        if sender == recipient:
-            error_id = 2
-            break
-        else:
-            error_id = 0
+    elif sender == recipient:
+        error_id = 2
 
-        if sender != "university.help@gmail.com":
-            error_id = 3
-            break
+    elif sender != "university.help@gmail.com":
+        error_id = 3
 
 
     if error_id == 0:
@@ -25,7 +19,6 @@ def send_email(messege, recipient, sender = "university.help@gmail.com"):
         print("Нельзя отправить письмо самому себе!")
     elif error_id == 3:
         print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса', sender, 'на адрес', recipient)
-
 
 
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
