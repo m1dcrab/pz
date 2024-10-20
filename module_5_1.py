@@ -9,7 +9,6 @@ class House:
             print("Такого этажа не существует")
         else:
             for floor in range(1,new_floor+1):
-                if floor <= self.number_of_floors:
                     print(floor)
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
