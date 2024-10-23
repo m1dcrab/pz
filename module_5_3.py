@@ -56,15 +56,7 @@ class house:
 
 h1 = house('ЖК Эльбрус', 10)
 h2 = house('ЖК Акация', 20)
-'''
-h1.go_to(5)
-h2.go_to(10)
-h3.go_to(randrange(-2,12))
-# __len__
-print(len(h1))
-print(len(h2))
-print(len(h3))
-'''
+
 # __str__
 print(h1)
 print(h2)
