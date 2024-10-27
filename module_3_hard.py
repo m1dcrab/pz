@@ -5,7 +5,7 @@ data_structure = [
 "Hello",
 ((), [{(2, 'Urban', ('Urban2', 35))}])
 ]
-test = []
+data_structure_sum = []
 def calculate_structure_sum(*args):
     for var_len in range(len(args)):
         if isinstance(args[var_len],list) or isinstance(args[var_len],tuple) or isinstance(args[var_len], set):
@@ -15,9 +15,9 @@ def calculate_structure_sum(*args):
                 calculate_structure_sum(dict_key)
                 calculate_structure_sum(args[var_len][dict_key])
         if isinstance(args[var_len],int):
-            test.append(args[var_len])
+            data_structure_sum.append(args[var_len])
         if isinstance(args[var_len],str):
-            test.append(len(args[var_len]))
-    return sum(test)
+            data_structure_sum.append(len(args[var_len]))
+    return sum(data_structure_sum)
 result = calculate_structure_sum(data_structure)
 print(result)
