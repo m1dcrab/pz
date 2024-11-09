@@ -28,7 +28,6 @@ class Figure:
         if self.__is_valid_color(r, g, b):
             self.__color = r,g,b
 
-
 # методы для сторон
     def __is_valid_sides(self,new_sides_check):
         for i in new_sides_check:
@@ -48,7 +47,6 @@ class Figure:
 # метод для вычисления периметра фигуры
     def __len__(self):
         return sum(self.__sides)
-
 
 # круг
 class Circle(Figure):
