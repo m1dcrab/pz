@@ -72,6 +72,7 @@ class Triangle(Figure):
 
     def __init__(self, color, *triangle_sides):
         super().__init__(color, list(triangle_sides))
+        
     def get_square(self):
         p = self.__len__()/2
         return math.sqrt(p * (p - self.get_sides()[0]) * (p - self.get_sides()[1]) * (p - self.get_sides()[2]))
