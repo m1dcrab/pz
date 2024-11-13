@@ -1,10 +1,10 @@
 def custom_write(file_name, strings):
     result = {}
-    red_string = 0
+    red_line = 0
     file = open(file_name, 'w', encoding='utf-8')
     for i in strings:
-        red_string = red_string + 1
-        result[red_string,file.tell()] = i
+        red_line = red_line + 1
+        result[red_line,file.tell()] = i
         file.write(i+'\n')
     file.close()
     return result
