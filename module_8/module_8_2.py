@@ -6,7 +6,7 @@ def personal_sum(numbers):
                  result += i
              except:
                 print(f'Некорректный тип данных для подсчёта суммы - {i}')
-                incorrect_data +=1
+                incorrect_data += 1
         return result,incorrect_data
 
 def calculate_average(numbers):
