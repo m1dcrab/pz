@@ -2,7 +2,6 @@ import threading
 import time
 from random import randrange
 
-
 class Bank:
     def __init__(self):
         self.balance = 0
