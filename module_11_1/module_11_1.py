@@ -1,12 +1,12 @@
 from PIL import Image, ImageFilter
-import requests
+from requests import get
 import io
 
 img1_link = 'https://psv4.userapi.com/s/v1/d/vhrr86J3my2CUKCXB_OgwQVgZFCTnp9PgA0nvxrdAg_C4H9Bk495sZTyQ1Bwt4fHR6cW05xX_5yu7h91tVncJJOajAjJ2VGUkTrwQX-JrCdKdvlt/image1.png'
 img2_link = 'https://psv4.userapi.com/s/v1/d/lZJxaRrX6zv82dZ0Gd4pceVvcd8MtVi9KbcUVNb7tUT5EECf3JOVYF0SaetO6CGapSDYFTORo6A6Zub_ZbDbDebuj1SwQtW15_CKuu1VdGzBMwOQlN_LjA/image2.png'
 
 def parse_img(link):
-    return Image.open(io.BytesIO(requests.get(link).content))
+    return Image.open(io.BytesIO(get(link).content))
 
 img = parse_img(img1_link)
 img2 = parse_img(img2_link)
