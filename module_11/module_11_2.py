@@ -20,8 +20,10 @@ def introspection_info(obj):
     for elem in dir(obj):
         if callable(getattr(obj,elem)):
             obj_meth.append(elem)
+            
     #Модуль, к которому объект принадлежит
     obj_module = obj.__module__
+    
     #Другие интересные свойства объекта, учитывая его тип
     obj_an = NewClass.__annotations__
 
