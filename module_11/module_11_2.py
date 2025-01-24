@@ -1,3 +1,6 @@
+import inspect
+
+
 class NewClass:
     atr1: float
     atr2: int = 12
@@ -21,7 +24,7 @@ def introspection_info(obj):
         if callable(getattr(obj,elem)):
             obj_meth.append(elem)
     #Модуль, к которому объект принадлежит
-    obj_module = obj.__module__
+    obj_module = inspect.getmodule(obj)
     #Другие интересные свойства объекта, учитывая его тип
     obj_an = NewClass.__annotations__
 
